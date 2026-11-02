@@ -27,7 +27,7 @@
 "gen": {"do_sample": False}
 
 - 自分で学習を実行したか（`executed_training_myself`）：はい / いいえ（実行できた範囲：　）
-- 学習前：`format_rate` =　 / `content_rate` =　
+- 学習前：`format_rate` = 0.09523809523809523 / `content_rate` = 0.0
 - 学習後：`format_rate` =　 / `content_rate` =　
 - 退行した質問：
 - 学習後に残った失敗と、その型（根拠なしの質問に断定した / 根拠ありの質問に確認要求で逃げた / 形式の崩れ）：
