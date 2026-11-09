@@ -34,13 +34,17 @@ INSTRUCTIONS = """\
 - 回の内容を聞かれたら get_lecture_summary を使う。
 - 用語集に見つからないことは、推測で断定せず「用語集にはない」と伝える。
 - 回答の最後に、関係する回（第N回）を示す。
-- 宿題の答えそのものは書かず、考え方のヒントで導く。
+- 答えは出力してはいけない。
+- ヒントは【確認問題】の後に【ヒント】という枠の中に記入する。
+- ヒントは宿題の答えを参考に考える。
+- ヒントは宿題の答えをそのまま使うのではなく類推できる文とする。
 """
 
 # モデルは実行時に渡す（テストではAPIを呼ばない TestModel に差し替えるため）
 agent = Agent(instructions=INSTRUCTIONS)
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
+agent.tool_plain(tools.make_quiz)
 
 # TODO(第3回 演習): tools.py に make_quiz を作り、ここで登録しよう
 
